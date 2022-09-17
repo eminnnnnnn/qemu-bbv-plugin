@@ -1,7 +1,7 @@
 QEMU_INCLUDEDIR="./qemu/include/"
 QEMU_BIN="./qemu-aarch64"
 CXX_FLAGS=-Wall -Werror
-LIBS_CXX_FLAGS=$(CXX_FLAGS) -fPIC -shared -I $(QEMU_INCLUDEDIR)
+LIBS_CXX_FLAGS=$(CXX_FLAGS) -std=c++17 -fPIC -shared -I $(QEMU_INCLUDEDIR)
 
 libs: libbbv_caches.so libsimpoint_run.so
 test: mtx_mul
