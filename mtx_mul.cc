@@ -2,9 +2,11 @@
 #include <ctime>
 
 int main(int argc, char** argv) {
-	if (argc < 2) return -1;
 
-	int mtxSize = std::atoi(argv[1]);
+	int mtxSize = 100;
+	if (argc == 2) {
+		mtxSize = std::atoi(argv[1]);
+	}
 	int mtxDim = mtxSize * mtxSize;
 
 	int* mtxA = new int[mtxDim];
